@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # <xbar.title>Weather Widget</xbar.title>
-# <xbar.version>v0.1</xbar.version>
+# <xbar.version>v0.2</xbar.version>
 # <xbar.author>Paul Lahana</xbar.author>
 # <xbar.author.github>paultursuru</xbar.author.github>
 # <xbar.desc>Weather widget for me</xbar.desc>
@@ -16,8 +16,8 @@ METEO_SUISSE_URL = "https://www.meteosuisse.admin.ch/previsions-locales/lausanne
 DATA_VERSIONS_IDS = "https://www.meteosuisse.admin.ch/product/output/versions.json"
 versions_ids = JSON.parse(URI.open(DATA_VERSIONS_IDS).read)
 
-DATA_WEEK = "https://www.meteosuisse.admin.ch/product/output/weather-widget/forecast/version__#{versions_ids['weather-widget/forecast']}/fr/100700.json"
-DATA_DETAILED_FORECAST = "https://www.meteosuisse.admin.ch/product/output/forecast-chart/version__#{versions_ids['forecast-chart']}/fr/100700.json"
+DATA_WEEK = "https://www.meteosuisse.admin.ch/product/output/weather-widget/forecast-v2/version__#{versions_ids['weather-widget/forecast-v2']}/fr/100700.json"
+DATA_DETAILED_FORECAST = "https://www.meteosuisse.admin.ch/product/output/forecast-chart-v2/version__#{versions_ids['forecast-chart-v2']}/fr/100700.json"
 
 STATIC_IMAGES_URL = "https://www.meteosuisse.admin.ch/static/resources/weather-symbols"
 
