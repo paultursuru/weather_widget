@@ -30,10 +30,12 @@ A clean, data-rich weather plugin for [xbar](https://github.com/matryer/xbar) (t
 
 ## Configuration
 
-By default, the script is configured for **Lausanne (1007)**. To change the location:
+By default, the script is configured for **Lausanne (1007)**. To change the location, set the `VAR_POSTAL_CODE` xbar variable to any Swiss postal code:
 
-1.  Open the script in a text editor.
-2.  Update the `METEO_SUISSE_URL` and the ID `100700` inside the `DATA_WEEK` and `DATA_DETAILED_FORECAST` URLs to match your desired Swiss zip code/station ID.
+* from xbar: open the plugin browser (**xbar → Open plugin…**), select the weather plugin and edit the variable, or
+* by hand: create `weather.10m.rb.vars.json` next to the plugin with `{"VAR_POSTAL_CODE": "1201"}`.
+
+The city name, the MeteoSuisse link and the forecast location are looked up from the postal code. When several localities share a postal code, the main one is used.
 
 ## Technical Details
 
